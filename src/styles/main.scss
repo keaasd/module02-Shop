@@ -1,14 +1,23 @@
-$text: #27300f;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,700;1,700&family=Jost:wght@400;500&display=swap');
+
+$green: #27300f;
 $orange: #d26a22;
 $white: #fff;
+$font-cormorant: 'Cormorant', serif;
+$font-jost: 'Jost', sans-serif;
 html, body {
 	margin: 0;
 	padding: 0;
+	font-size: 10px;
+}
+body {
+	font-size: 1.6rem;
+	font-family: $font-jost;
 }
 .header  {
 	max-width: 1440px;
 	margin: 0 auto;
-	padding: 45px 15px 0;
+	padding: 4rem 15px 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -17,19 +26,21 @@ html, body {
 		list-style-type: none;
 		margin: 0;
 		padding-left: 0;
-		gap: 48px;
+		gap: 4.8rem;
 	}
 	&__link {
-		font-size: 16px;
+		font-size: 1.6rem;
 		text-decoration: none;
-		color: $text;
+		color: $green;
 		&:hover {
-			color: $orange;
+			color: $orange; 
 		}
 	}
 	&__tel {
-		color: $text;
+		font-size: 1.6rem;
+		color: $green;
 		text-decoration: none;
+		font-weight: 500;
 		&:hover {
 			color: $orange;
 		}
@@ -39,20 +50,25 @@ html, body {
 		background-image: url(../images/cart.svg);
 		background-repeat: no-repeat;
 		background-position: center;
-		background-size: 16px 14px;
+		background-size: 1.6rem 1.4rem;
 		background-color: $orange;
-		width: 40px;
-		height: 40px;
+		width: 3.8rem;
+		height: 3.8rem;
 		border-radius: 100%;
+		border: 1px solid $orange;
 		text-decoration: none;
 		position: relative;
+		&:hover {
+			background-color: $green;
+			border: 1px solid $green;
+		}
 	}
 	&__counter {
-		font-size: 8px;
+		font-size: .8rem;
 		color: $white;
 		position: absolute;
-		top: 6px;
-		right: 10px;
+		top: 0.3rem;
+		right: 0.6rem;
 	}
 }
 .logo {
@@ -60,6 +76,6 @@ html, body {
 	background-image: url(../images/logo.svg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	width: 123px;
-	height: 32px;
+	width: 12.3rem;
+	height: 3.2rem;
 }

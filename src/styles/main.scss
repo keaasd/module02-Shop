@@ -23,7 +23,7 @@ body {
 }
 .header  {
 	max-width: 1440px;
-	margin: 0 auto;
+	margin: 0 auto 4.9rem;
 	padding: 4rem 15px 0;
 	display: flex;
 	justify-content: space-between;
@@ -46,6 +46,8 @@ body {
 		color: $green;
 		text-decoration: none;
 		font-weight: 500;
+		letter-spacing: .12rem;
+		// margin-left: 9rem;
 		&:hover {
 			color: $orange;
 		}
@@ -84,13 +86,18 @@ body {
 	width: 12.3rem;
 	height: 3.2rem;
 }
-.main__text {
-	margin-top: 23.8rem;
+nav {
+	flex-basis: 77.7rem;
 }
 .main {
+	position: relative;
 	background-image: url(../images/main.png);
 	background-size: cover;
 	background-position-x: center;
+	padding-bottom: 187px;
+	&__text {
+		margin-top: 39px;
+	}
 	&__item {
 		margin-left: 12rem;
 		max-width: 378px;
@@ -99,6 +106,125 @@ body {
 	&__link {
 		margin-top: 5.4rem;
 	}
+	&__flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 30px;
+	}
+	&__cover {
+		position: relative;
+		flex-basis: 760px;
+		height: 760px;
+		border: 1px solid rgba($green, 0.4);
+		border-radius: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	&__line {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 658px;
+		height: 658px;
+		// box-shadow: 0 0 0 1px rgba($green, 0.4), 0 0 0 53px rgba($green, 0), 0 0 0 54px rgba($green, 0.4);
+		border: 1px solid rgba($green, 0.4);
+		border-radius: 100%;
+	}
+	&__image {
+		width: 91%;
+	}
+	&__btn {
+		position: absolute;
+		border: none;
+		background-color: transparent;
+		padding: 0;
+		text-align: left;
+		line-height: 1.5;
+		&:hover {
+			.main__btn {
+				&::before {
+					background-color: $orange;
+					box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
+				}
+			}
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			background-color: $green;
+			width: 11px;
+			height: 11px;
+			box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
+			border-radius: 100%;
+			color: $green;
+		}		
+	}
+	&__btn_1 {
+		top: 42px;
+		left: 63px;
+		&::before {
+			content: '';
+			bottom: 11px;
+			right: -35px;
+		}
+	}
+	&__btn_2 {
+		top: 190px;
+		right: 3px;
+		&::before {
+			content: '';
+			top: 20px;
+			left: -25px;
+		}
+	}
+	&__btn_3 {
+		bottom: -51px;
+		right: 244px;
+		&::before {
+			content: '';
+			top: -21px;
+			left: 12px;
+		}
+	}
+	&__food {
+		display: block;
+		color: rgba($green, 0.8); 
+	}
+	&__tomato {
+		position: absolute;
+		bottom: 115px;
+		right: 12rem;
+		width: 11rem;
+	}
+	&__avocado {
+		position: absolute;
+		height: 18.2rem;
+		top: 5rem;
+		right: -1rem;
+	}
+	&__breans {
+		position: absolute;
+		width: 14rem;
+		bottom: 16rem;
+		left: -3.4rem;
+	}
+	&__cucumber {
+		position: absolute;
+		width: 8.5rem;
+		top: -5rem;
+		left: 69rem;
+	}
+	&__pepper {
+		position: absolute;
+		width: 8.4rem;
+		top: 40rem;
+		left: 4rem;
+	}
+	
 }
 .title {
 	font-family: $font-cormorant;

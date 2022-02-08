@@ -28,6 +28,16 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	&__flex-left {
+		display: flex;
+		gap: 12rem;
+		align-items: center;
+	}
+	&__flex-right {
+		display: flex;
+		gap: 8rem;
+		align-items: center;
+	}
 	&__nav {
 		display: flex;
 		list-style-type: none;
@@ -84,9 +94,6 @@ body {
 	background-size: contain;
 	width: 12rem;
 	height: 3.2rem;
-}
-nav {
-	flex-basis: 77.7rem;
 }
 .main {
 	position: relative;
@@ -244,6 +251,10 @@ nav {
 }
 .title__span {
 	display: block;
+	&::after {
+		content: "!";
+		font-style: normal;
+	}
 }
 .description {
 	margin: 0;

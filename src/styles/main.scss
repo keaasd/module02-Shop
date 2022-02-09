@@ -94,6 +94,7 @@ body {
 	background-size: contain;
 	width: 12rem;
 	height: 3.2rem;
+	margin-right: 10px;
 }
 nav {	
 	flex-basis: 56.1%;
@@ -257,11 +258,11 @@ nav {
 	
 }
 .title__span {
-	display: block;
-	&::after {
-		content: "!";
-		font-style: normal;
-	}
+	display: block;	
+}
+.title_exclamatory::after {	
+	content: "!";
+	font-style: normal;
 }
 .description {
 	margin: 0;
@@ -269,6 +270,11 @@ nav {
 		font-size: 1.8rem;
 		line-height: 1.5;
 	}
+	&_size-m {
+		font-size: 2.4rem;
+		line-height: 1.5;
+	}
+
 }
 .link {
 	display: inline-block;
@@ -280,4 +286,9 @@ nav {
 	text-decoration: none;
 	border-radius: 3.8rem;
 	letter-spacing: 0.13rem;
+}
+.offer {
+	position: relative;
+	background-image: url(../images/main.png);
+	background-size: cover;
 }

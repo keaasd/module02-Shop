@@ -147,7 +147,9 @@ nav {
 		border-radius: 100%;
 	}
 	&__image {
-		width: 91%;
+		width: 91%;    
+		box-shadow: 14px 30px 28px -23px;
+		border-radius: 100%;
 	}
 	&__btn {
 		position: absolute;

@@ -104,6 +104,7 @@ nav {
 	background-image: url(../images/main.png);
 	background-size: cover;
 	background-position-x: center;
+	background-repeat: no-repeat;
 	padding-bottom: 187px;
 	overflow: hidden;
 	z-index: 0;
@@ -291,6 +292,20 @@ nav {
 }
 .offer {
 	position: relative;
-	background-image: url(../images/main.png);
+	background-image: url(../images/offer.png);
 	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top: 2rem;
+	&__text {
+		margin-top: 6rem;
+		max-width: 700px;
+	}
+}
+.swiper-slide {
+	&-slide {
+		border: 1px solid $green
+	}
+}
+footer {
+	padding-top: 200px;
 }

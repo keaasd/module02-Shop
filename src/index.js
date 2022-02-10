@@ -1,13 +1,13 @@
 import 'normalize.css'
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import './styles/main.scss';
-
 import $ from 'jquery';
 
 import Swiper, { Navigation, Pagination } from 'swiper';
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+
 
 
 // Swiper свайпер

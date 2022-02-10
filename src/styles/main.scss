@@ -24,7 +24,7 @@ body {
 .header  {
 	max-width: 1440px;
 	margin: 0 auto 4.7rem;
-	padding: 3.95rem 15px 0;
+	padding: 3.85rem 15px 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -97,7 +97,7 @@ body {
 	margin-right: 10px;
 }
 nav {	
-	flex-basis: 56.1%;
+	flex-basis: 56.8%;
 }
 .main {
 	position: relative;
@@ -300,11 +300,87 @@ nav {
 		margin-top: 6rem;
 		max-width: 700px;
 	}
-}
-.swiper-slide {
-	&-slide {
-		border: 1px solid $green
+	&__slider {
+		overflow: hidden;
+		padding-top: 9.5rem;
 	}
+}
+.swiper {
+	overflow: initial;
+	&-slide {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		box-sizing: border-box;
+		border: 1px solid rgba($green, 0.4);	
+		border-radius: 2rem;
+		padding: 3.6rem 4rem;
+		height: 52rem;
+		&:hover {
+			// border: 3px solid 	
+			box-shadow: 0 0 0 3px rgba($green, 0.4);
+		}
+		&__title {
+			padding: 0;
+			margin: 0;
+			font-size: 3rem;
+			color: $green;
+			font-weight: 700;
+			font-family: $font-cormorant;
+		}
+		&__text {
+			padding: 0;
+			margin: 0;
+			margin-top: 2.5rem;
+			max-width: 293px;
+			line-height: 1.5;
+			color: rgba($green, 0.7);
+		}
+		&__link {
+			display: flex;
+			align-items: center;
+			text-decoration: none;
+			text-transform: uppercase;
+			// color: rgba($green, 0.8);
+			color: $green;
+			opacity: 0.8;
+			letter-spacing: 0.1rem;
+			font-weight: 500;
+			margin-top: 3.5rem;
+			
+			&::before {
+				content: "";
+				background-image: url(../images/swiper-plus.svg);
+				background-repeat: no-repeat;
+				background-size: cover;
+				display: block;
+				width: 29px;
+				height: 29px;
+				margin-right: 2.1rem;
+			}
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+	&-pagination {
+		display: none;
+	}
+	&-button-next, &-button-prev {
+		top: -24px;
+		left: initial;
+		right: 23.13rem;
+		&::after {
+			color: $green;
+			font-size: 1.8rem;
+		}
+	}
+	&-button-prev {
+		right: 31.3rem;
+	}	
+} 
+.advantage {
+	padding-top: 400px;
 }
 footer {
 	padding-top: 200px;

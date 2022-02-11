@@ -314,7 +314,7 @@ nav {
 		box-sizing: border-box;
 		border: 1px solid rgba($green, 0.4);	
 		border-radius: 2rem;
-		padding: 3.6rem 4rem;
+		padding: 3.6rem 3.7rem;
 		height: 52rem;
 		&:hover {
 			// border: 3px solid 	
@@ -322,7 +322,7 @@ nav {
 		}
 		&__title {
 			padding: 0;
-			margin: 0;
+			margin-bottom: 1rem;
 			font-size: 3rem;
 			color: $green;
 			font-weight: 700;
@@ -332,7 +332,7 @@ nav {
 			padding: 0;
 			margin: 0;
 			margin-top: 2.5rem;
-			max-width: 293px;
+			max-width: 263px;
 			line-height: 1.5;
 			color: rgba($green, 0.7);
 		}
@@ -369,15 +369,22 @@ nav {
 	&-button-next, &-button-prev {
 		top: -24px;
 		left: initial;
-		right: 23.13rem;
+		&:hover {
+			&::after {
+				color: rgba($green, 1);
+			}
+		}
 		&::after {
-			color: $green;
+			color: rgba($green, .4);
 			font-size: 1.8rem;
 		}
 	}
 	&-button-prev {
 		right: 31.3rem;
 	}	
+	&-button-next {
+		right: -8px;
+	}
 } 
 .about {
 	padding-top: 400px;

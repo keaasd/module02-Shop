@@ -560,21 +560,18 @@ nav {
 			&::before {
 			background-image: url(../images/fruits.png);
 			background-size: 44px 41px;
-			background-repeat: no-repeat;
 			}
 		}
 		&:nth-child(2) {
 			&::before {
 				background-image: url(../images/traditional.png);
 				background-size: 44px 41px;
-				background-repeat: no-repeat;
 			}
 		}
 		&:nth-child(3) {
 			&::before {
-			background-image: url(../images/goods.svg);
+			background-image: url(../images/goodd.png);
 			background-size: 45px 39px;
-			background-repeat: no-repeat;
 			}
 		}				
 	}	

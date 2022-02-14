@@ -258,7 +258,6 @@ nav {
 	&_block {
 		display: block;
 	}
-	
 }
 .title_exclamatory::after {	
 	content: "!";
@@ -290,7 +289,7 @@ nav {
 		box-shadow: .48rem .87rem .65rem rgba(207,92,13,0.2);
 		background-color: #bf601f;
 	}
-	&_s {
+	&_max {
 		padding-left: 51px;
 		padding-right: 51px;
 	}
@@ -317,9 +316,9 @@ nav {
 		box-sizing: border-box;
 		border: 1px solid rgba($green, 0.4);	
 		border-radius: 2rem;
-		padding: 3.9rem 3.7rem;
 		z-index: 0;
 		&_white {
+			padding: 3.9rem 3.7rem;
 			background-repeat: no-repeat;
 			background-size: cover;
 			height: 52rem;
@@ -344,6 +343,7 @@ nav {
 						z-index: -1;
 				}
 			}
+
 		}
 		&:hover {
 			box-shadow: 0 0 0 2px rgba($green, 0.4) inset;			
@@ -415,41 +415,47 @@ nav {
 			&:hover {
 				opacity: 1;
 			}
+			
 		}
 		&_hight {
-			height: 68.6rem;
+			// height: 68.6rem;
+			padding: 2.9rem 3.7rem 4rem;
 		}
 		&_cover {
 			position: relative;
 			overflow: hidden;
 			width: 100%;
-			height: 300px;
-			// max-height: 293px;
+			height: 322px;
 			text-align: center;
 		}
 		&_image {
+			max-width: 351px;
 			height: 100%;
-			
+			width: 100%;
+			object-fit: contain;
 		}
 		&_footer {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			margin-top: 3.3rem;
 		}
 		&_description {
 			padding: 0;
-			margin-top: 1rem;
-			max-width: 282px;
+			margin-top: 2.2rem;
+			max-width: 290px;
 			line-height: 1.5;
 			color: rgba($green, 0.7);
 			font-size: 1.8rem;
 			margin-bottom: 1px;
+			min-height: 69px;
 		}
 		&_price {
 			font-size: 2.4rem;
 			margin-top: 10px;
 			margin-bottom: 1.5rem;
 		}
+		
 	}
 	&-pagination {
 		display: none;
@@ -583,7 +589,73 @@ nav {
 	&__text {
 		margin-top: 4rem;
 	}
-
+	&_title {
+		margin-top: 10px;
+		border: 1px solid red;		
+	}
+}
+.catalog {
+	padding-top: 15.7rem;
+	&__item {
+		margin-top: 3.7rem;
+		margin-bottom: 112px;
+	}
+	&__list {
+		padding-left: 0;
+		list-style: none;
+		display: flex;
+		gap: 20px;
+	}
+	.category {		
+		&__item {
+			opacity: 1;
+		}
+		
+		&__link {
+			font-size: 1.8rem;
+			text-decoration: none;
+			color: $green;
+			border-radius: 35px;
+			// background-color: #0d1d32;
+			border: 1px solid rgba($green, 0.5);
+			padding: 18px 83px 23px;
+			&_min {
+				padding: 1.9rem 3.3rem 2.3rem;
+			}
+			&_s {
+				padding: 18px 65px 23px;
+			}
+		}		
+		&__active {
+			color: $orange;
+			border: 1px solid $orange;
+		}
+	}
+}
+.catalog-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+	margin-top: 7.6rem;
+	&__item {
+		box-sizing: border-box;
+		border: 1px solid rgba(39, 48, 15, 0.4);
+		border-radius: 2rem;
+		&:hover {
+			box-shadow: 0 0 0 2px rgba(39, 48, 15, 0.4) inset;
+		}
+	}
+	&__cover {
+		overflow: hidden;
+		width: 100%;
+		height: 322px;
+		text-align: center;
+	}
+}
+.link {
+	&_min {
+		padding: 10px 30px;
+	}
 }
 footer {
 	padding-top: 200px;

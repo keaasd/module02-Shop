@@ -314,19 +314,17 @@ nav {
 .swiper {
 	overflow: initial;
 	&-slide {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
 		box-sizing: border-box;
 		border: 1px solid rgba($green, 0.4);	
 		border-radius: 2rem;
 		padding: 3.9rem 3.7rem;
-		height: 52rem;
-		background-repeat: no-repeat;
-		background-size: cover;
-		position: relative;
 		z-index: 0;
 		&_white {
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 52rem;
+			display: flex;
+			flex-direction: column;
 			justify-content: flex-end;
 			&:hover {
 				.swiper-slide__hover {

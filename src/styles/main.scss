@@ -490,7 +490,7 @@ nav {
 		background-color:  transparent;
 		padding: 0;
 		background-position: center;
-		border-radius: 100%;
+		border-radius: 100%;		
 	}
 	&_minus {
 		pointer-events: none;
@@ -499,6 +499,7 @@ nav {
 		background-repeat: no-repeat;
 		opacity: .4;
 	}
+	
 	&_plus {
 		background-image: url(../images/plus-counter.svg);
 		background-size: 30px 30px;
@@ -596,6 +597,10 @@ nav {
 }
 .catalog {
 	padding-top: 15.7rem;
+	padding-bottom: 13.6rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url(../images/catalog.png);
 	&__item {
 		margin-top: 3.7rem;
 		margin-bottom: 112px;
@@ -606,29 +611,62 @@ nav {
 		display: flex;
 		gap: 20px;
 	}
-	.category {		
-		&__item {
-			opacity: 1;
+	
+}
+.category {		
+	&__item {
+		opacity: 1;
+	}	
+	&__link {
+		font-size: 1.8rem;
+		text-decoration: none;
+		color: $green;
+		border-radius: 35px;
+		// background-color: #0d1d32;
+		border: 1px solid rgba($green, 0.5);
+		padding: 18px 83px 23px;
+		&_min {
+			padding: 1.9rem 3.3rem 2.3rem;
 		}
-		
-		&__link {
-			font-size: 1.8rem;
-			text-decoration: none;
-			color: $green;
-			border-radius: 35px;
-			// background-color: #0d1d32;
-			border: 1px solid rgba($green, 0.5);
-			padding: 18px 83px 23px;
-			&_min {
-				padding: 1.9rem 3.3rem 2.3rem;
-			}
-			&_s {
-				padding: 18px 65px 23px;
-			}
-		}		
-		&__active {
-			color: $orange;
-			border: 1px solid $orange;
+		&_s {
+			padding: 18px 65px 23px;
+		}
+	}		
+	&__active {
+		color: $orange;
+		border: 1px solid $orange;
+	}
+	&-refresh {
+		margin: 5.8rem auto 0;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+	}
+	&__button {
+		color: $green;
+		border: none;
+		background-color: transparent;
+		font-size: 1.6rem;
+		letter-spacing: .1rem;
+		text-transform: uppercase;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1.7rem;
+		opacity: .8;
+		&:hover {
+			opacity: 1;			
+		}
+		&::before {
+			content: '';
+			display: block;
+			background-image: url(../images/refresh.png);
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 25px;
+			height: 25px;
+			opacity: .8;
 		}
 	}
 }
@@ -649,8 +687,36 @@ nav {
 	&__cover {
 		overflow: hidden;
 		width: 100%;
-		height: 322px;
+		height: 206px;
 		text-align: center;
+	}
+	&__image {
+		max-width: 250px;
+		height: 100%;
+		width: 100%;
+		object-fit: contain;
+	}
+	&__title {		
+		padding: 0;
+		margin: 0;
+		font-size: 3rem;
+		font-weight: 700;
+		font-family: $font-cormorant;
+	}
+	&__description {
+		padding: 0;
+		// margin-top: 2.2rem;
+		max-width: 238px;
+		line-height: 1.5;
+		font-size: 1.6rem;
+		margin-bottom: 1px;
+		min-height: 40px;
+		color: rgba($green, 0.7);
+	}
+	&__price {
+		font-size: 2.4rem;
+		margin-top: 1.5rem;
+		// margin-bottom: 1.5rem;
 	}
 	&__footer {
 		display: flex;
@@ -661,9 +727,23 @@ nav {
 }
 .link {
 	&_min {
-		padding: 10px 30px;
+		padding: 21px 35px 18px;
+		font-size: 1.4rem;
+		letter-spacing: .1rem;
 	}
 }
+.counter_btn_min  {
+	background-size: 30px 30px;
+	width: 40px;
+	height: 40px;
+}
+.counter_input_min {
+	width: 30px;
+}
+.delivery {
+	padding-top: .7rem;
+	
+}
 footer {
-	padding-top: 200px;
+	margin-top: 3rem;
 }

@@ -106,7 +106,6 @@ nav {
 	background-position-x: center;
 	background-repeat: no-repeat;
 	padding-bottom: 187px;
-	overflow: hidden;
 	z-index: 0;
 	&__text {
 		margin-top: 39px;
@@ -216,9 +215,9 @@ nav {
 	}
 	&__avocado {
 		position: absolute;
-		height: 12.2rem;
+		height: 18.9rem;
 		top: 5rem;
-		right: 3rem;
+		right: 3.2rem;
 		z-index: -1;
 	}
 	&__breans {
@@ -603,9 +602,10 @@ nav {
 }
 .catalog {
 	padding-top: 15.7rem;
-	padding-bottom: 13.6rem;
+	padding-bottom: 12rem;
 	background-size: cover;
 	background-repeat: no-repeat;
+	overflow: hidden;
 	background-image: url(../images/catalog.png);
 	&__item {
 		margin-top: 3.7rem;
@@ -745,11 +745,92 @@ nav {
 	width: 30px;
 }
 .delivery {
-	padding-top: .7rem;
-	
+	background-image: url(../images/delivery.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 2rem;
+	padding-bottom: 16.5rem;
+	&__holder {
+		flex-grow: 1;
+	}
+	&__box {
+		display: flex;
+		justify-content: space-between;
+		font-size: 1.8rem;
+		line-height: 1.5;
+		margin-top: 7.4rem;
+		margin-left: 12rem;
+	}
+	&__payment {
+		flex-basis: 589px;
+		background-color: transparent;
+	}
+	&__description {
+		max-width: 575px;
+		margin: 0;
+		&_padding {			
+		margin-top: 27px;
+		}
+	}
+	&__link {
+		color: $green;
+		text-decoration-color: $green;
+		text-decoration: none;
+		&:hover {
+			color: $orange;
+			text-decoration-color: $orange;
+		}
+	}
+	&__sale {
+		color: $green;
+		margin-top: 0;
+		max-width: 500px;
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: 30px;
+		padding-left: 0;
+		list-style: none;
+		margin-top: 45px;
+		margin-bottom: 0;
+	}
+	&__item {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		opacity: .4;
+		&_image1 {
+			background-image: url(../images/mastercard.svg);			
+			width: 53px;
+			height: 32px;
+			&:hover {
+				opacity: 1;
+			}
+		}
+		&_image2 {
+			background-image: url(../images/visa.svg);			
+			width: 74px;
+			height: 23px;
+			&:hover {
+				opacity: 1;
+			}
+		}
+		&_image3 {
+			background-image: url(../images/paypal.svg);
+			width: 87px;
+			height: 24px;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+	&__colory {
+		color: $orange;
+	}
 }
 .contact {
-	padding-top: 100px;
+	padding-top: 37px;
 	padding-bottom: 100px;
 	&-box {
 		display: flex;
@@ -765,7 +846,7 @@ nav {
 			}
 			&__form {
 				flex-basis: 470px;
-				padding: 3.3rem 5.8rem 3.8rem;
+				padding: 3.1rem 5.8rem 3.8rem;
 				border: 2px solid rgba($green, 0.4);
 				border-radius: 2rem;
 			}
@@ -791,7 +872,9 @@ nav {
 				// justify-content: space-between;
 				align-items: center;
 				gap: 3rem;
-
+				&:hover {
+					color: $orange;
+				}
 					&::before {
 						content: '';
 						display: inline-block;
@@ -806,6 +889,7 @@ nav {
 							height: 25px;
 						}				
 					}
+			
 			}
 		}
 }	

@@ -671,7 +671,7 @@ nav {
 		&::before {
 			content: '';
 			display: block;
-			background-image: url(../images/refresh.png);
+			background-image: url(../images/refresh.svg);
 			background-position: center center;
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -765,7 +765,7 @@ nav {
 			}
 			&__form {
 				flex-basis: 470px;
-				padding: 3.2rem 5.8rem 4rem;
+				padding: 3.3rem 5.8rem 3.8rem;
 				border: 2px solid rgba($green, 0.4);
 				border-radius: 2rem;
 			}
@@ -790,7 +790,7 @@ nav {
 				display: flex;
 				// justify-content: space-between;
 				align-items: center;
-				gap: 28px;
+				gap: 3rem;
 
 					&::before {
 						content: '';
@@ -824,13 +824,13 @@ nav {
 	&__label {
 		font-size: 1.2rem;
 		display: block;
-		margin-left: 6rem;
+		margin-left: .6rem;
 		margin-bottom: 9px;
 	}
 	&__input {
 		display: block;
 		border: 1px solid rgba($green, 0.4);
-		padding: 2.2rem 3rem;
+		padding: 2.1rem 3rem;
 		margin-bottom: 2.8rem;
 		width: 100%;
 		box-sizing: border-box;
@@ -846,7 +846,7 @@ nav {
 	&__check {
 		font-size: 1.2rem;
 		color: rgba($green, 0.6);
-		line-height: 1.5;
+		line-height: 1.6;
 		max-width: 36rem;
 		max-width: 360px;
 		margin-top: 1.6rem;
@@ -854,11 +854,30 @@ nav {
 	}
 	&__link {
 		margin-top: 1.2rem;
+		padding: 2.3rem 4.8rem;
 	}
 	&__docs {
+		position: relative;
 		color: rgba($green, 0.6);
 		text-decoration: none;
-		border-bottom: 1px solid #ecedec;
+		// border-bottom: 1px solid #ecedec;
+		// text-decoration-color: #ecedec; 
+		&::after {
+			content: '';
+			position: absolute;
+			background-color: rgba($green, 0.6);
+			bottom: 3px;
+			left: 0;
+			width: 100%;
+			&:hover {
+				background-color: rgba($green, 1);
+			}
+		}
+		&:hover {
+			color: rgba($green, 1);
+		}
+
+
 	}
 }
 footer {

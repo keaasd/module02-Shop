@@ -751,18 +751,18 @@ nav {
 	padding-top: 2rem;
 	padding-bottom: 16.5rem;
 	&__holder {
-		flex-grow: 1;
+		flex-basis: 44%;
 	}
 	&__box {
 		display: flex;
-		justify-content: space-between;
 		font-size: 1.8rem;
 		line-height: 1.5;
 		margin-top: 7.4rem;
 		margin-left: 12rem;
+		gap: 11.5%;
 	}
 	&__payment {
-		flex-basis: 589px;
+		flex-basis: 37%;
 		background-color: transparent;
 	}
 	&__description {
@@ -773,18 +773,29 @@ nav {
 		}
 	}
 	&__link {
+		position: relative;
 		color: $green;
-		text-decoration-color: $green;
 		text-decoration: none;
 		&:hover {
 			color: $orange;
-			text-decoration-color: $orange;
+			&:after {
+				background-color: $orange;
+			}
+		}
+		&::after { 
+			content: '';
+			display: block;
+			position: absolute;
+			background-color: #74776b;
+			bottom: 3px;
+			height: 1px;
+			left: 0;
+			width: 100%;
 		}
 	}
 	&__sale {
 		color: $green;
 		margin-top: 0;
-		max-width: 500px;
 	}
 	&__list {
 		display: flex;

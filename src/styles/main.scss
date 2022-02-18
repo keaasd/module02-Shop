@@ -48,6 +48,7 @@ body {
 	&__link {
 		text-decoration: none;
 		color: $green;
+		transition: .2s ease-in;
 		&:hover {
 			color: $orange; 
 		}
@@ -57,6 +58,7 @@ body {
 		text-decoration: none;
 		font-weight: 500;
 		letter-spacing: .12rem;
+		transition: .2s ease-in;
 		&:hover {
 			color: $orange;
 		}
@@ -74,6 +76,7 @@ body {
 		border: 1px solid $orange;
 		text-decoration: none;
 		position: relative;
+		transition: .2s ease-in;
 		&:hover {
 			background-color: $green;
 			border: 1px solid $green;
@@ -95,6 +98,11 @@ body {
 	width: 12rem;
 	height: 3.2rem;
 	margin-right: 10px;
+	transform: scale(1);
+	transition: .2s ease-in;
+	&:hover {
+		transform: scale(1.1112);
+	}
 }
 nav {	
 	flex-basis: 56.8%;
@@ -158,6 +166,7 @@ nav {
 		padding: 0;
 		text-align: left;
 		line-height: 1.5;
+		transition: .2s ease-in;
 		&:hover {			
 			&::before {
 				background-color: $orange;
@@ -182,6 +191,7 @@ nav {
 			content: '';
 			bottom: 11px;
 			right: -35px;
+			transition: 0.2s ease-in;
 		}
 	}
 	&__btn_2 {
@@ -285,6 +295,7 @@ nav {
 	border-radius: 3.8rem;
 	letter-spacing: 0.13rem;
 	border: none;
+	transition: .2s ease-in;
 	&:hover {
 		box-shadow: .48rem .87rem .65rem rgba(207,92,13,0.2);
 		background-color: #bf601f;
@@ -322,6 +333,7 @@ nav {
 		border: 1px solid rgba($green, 0.4);	
 		border-radius: 2rem;
 		z-index: 0;
+		transition: .2s ease-in;
 		&_white {
 			padding: 3.9rem 3.7rem;
 			background-repeat: no-repeat;
@@ -330,6 +342,7 @@ nav {
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end;
+			transition: .2s ease-in;
 			&:hover {
 				.swiper-slide__hover {
 					height: 233px;
@@ -355,7 +368,8 @@ nav {
 		}
 		&_milk {
 			background-size: 97%;		
-			background-image: url(../images/milk.png);	
+			background-image: url(../images/milk.png);
+			transition: .2s ease-in;	
 			&:hover {
 				background-size: cover;	
 			}
@@ -363,6 +377,7 @@ nav {
 		&_pasta {
 			background-size: cover;
 			background-image: url(../images/pasta.png);
+			transition: .2s ease-in;
 			&:hover {
 				background-size: 103%;	
 			}
@@ -370,6 +385,7 @@ nav {
 		&_steaks {
 			background-size: cover;
 			background-image: url(../images/steaks.png);
+			transition: .2s ease-in;
 			&:hover {
 				background-size: 103%;	
 			}
@@ -394,6 +410,7 @@ nav {
 			max-width: 263px;
 			line-height: 1.5;
 			color: rgba($green, 0.7);
+			transition: .2s ease-in;
 			&:hover {
 				opacity: 1;
 			}
@@ -407,6 +424,7 @@ nav {
 			opacity: .8;
 			letter-spacing: 0.1rem;
 			font-weight: 500;	
+			transition: .2s ease-in;
 			&::before {
 				content: "";
 				background-image: url(../images/swiper-plus.svg);
@@ -468,6 +486,7 @@ nav {
 	&-button-next, &-button-prev {
 		top: -60px;
 		left: initial;
+		transition: .2s ease-in;
 		&:hover {
 			&::after {
 				color: rgba($green, 1);
@@ -509,6 +528,10 @@ nav {
 		background-image: url(../images/plus-counter.svg);
 		background-size: 30px 30px;
 		background-repeat: no-repeat;
+		transition: 0.2s ease-in;
+		&:hover {
+			opacity: 1;
+		}
 	}
 	&_input {
 		text-align: center;
@@ -516,6 +539,7 @@ nav {
 		width: 46px;
 		border: none;
 		padding: 0;
+		transition: 0.2s;
 	}
 }
 .about {
@@ -631,6 +655,7 @@ nav {
 		// background-color: #0d1d32;
 		border: 1px solid rgba($green, 0.5);
 		padding: 18px 83px 23px;
+		transition: .2s ease-in;
 		&:hover {
 			border: 1px solid rgba($orange, 0.5);
 			color: $orange;
@@ -665,6 +690,7 @@ nav {
 		gap: 1.7rem;
 		opacity: .8;
 		cursor: pointer;
+		transition: .2s ease-in;
 		&:hover {
 			opacity: 1;			
 		}
@@ -691,6 +717,7 @@ nav {
 		border: 1px solid rgba(39, 48, 15, 0.4);
 		border-radius: 2rem;
 		padding: 40px 30px 40px;
+		transition: .2s ease-in;
 		&:hover {
 			box-shadow: 0 0 0 2px rgba(39, 48, 15, 0.4) inset;
 		}
@@ -776,6 +803,7 @@ nav {
 		position: relative;
 		color: $green;
 		text-decoration: none;
+		transition: .2s ease-in;
 		&:hover {
 			color: $orange;
 			&:after {
@@ -791,6 +819,7 @@ nav {
 			height: 1px;
 			left: 0;
 			width: 100%;
+			transition: .2s ease-in;
 		}
 	}
 	&__sale {
@@ -815,6 +844,7 @@ nav {
 			background-image: url(../images/mastercard.svg);			
 			width: 53px;
 			height: 32px;
+			transition: .2s ease-in;
 			&:hover {
 				opacity: 1;
 			}
@@ -823,6 +853,7 @@ nav {
 			background-image: url(../images/visa.svg);			
 			width: 74px;
 			height: 23px;
+			transition: .2s ease-in;
 			&:hover {
 				opacity: 1;
 			}
@@ -831,6 +862,7 @@ nav {
 			background-image: url(../images/paypal.svg);
 			width: 87px;
 			height: 24px;
+			transition: .2s ease-in;
 			&:hover {
 				opacity: 1;
 			}
@@ -884,6 +916,7 @@ nav {
 				// justify-content: space-between;
 				align-items: center;
 				gap: 3rem;
+				transition: .2s ease-in;
 				&:hover {
 					color: $orange;
 				}
@@ -931,9 +964,11 @@ nav {
 		width: 100%;
 		box-sizing: border-box;
 		border-radius: 2rem;
+		transition: 0.2s ease-in;
 		&:focus {
 			border: 1px solid rgba($green, 1);
 			outline: none;
+			transition: 0.2s ease-in;
 		}
 		&:invalid {
 			border: red;
@@ -956,6 +991,7 @@ nav {
 		position: relative;
 		color: rgba($green, 0.6);
 		text-decoration: none;
+		transition: .2s ease-in;
 		&::after {
 			content: '';
 			position: absolute;
@@ -963,6 +999,7 @@ nav {
 			bottom: 3px;
 			left: 0;
 			width: 100%;
+			transition: .2s ease-in;
 			&:hover {
 				background-color: rgba($green, 1);
 			}
@@ -980,54 +1017,109 @@ footer {
 	background-repeat: no-repeat;
 	background-image: url(../images/footer.png);
 	&__box {
-		display: block;
+		display: flex;
+		justify-content: space-between;
+		gap: 30px;
 	}
 	&_logo {
-		display: block;
+		width: 179px;
+		height: 48px;
+		background-size: contain;
 	}
 	&__list {
-		display: block;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		line-height: 1.5;
 	}
 	&__item {
-		display: block;
+		font-size: 1.8rem;
+		margin-bottom: 15px;
 	}
 	&__link {
-		display: block;
+		color: $green;
+		text-decoration: none;
 	}
 	&__contact {
-		display: block;
+		font-size: 2.7rem;
 	}
 	&__tel {
 		display: block;
+		color: $green;
+		text-decoration: none;
+		margin-bottom: 10px;
+		transition: .2s ease-in;
+		font-weight: 500;
+		&:hover {
+			color: $orange;
+		}
 	}
 	&__mail {
-		display: block;
+		color: $green;
+		text-decoration: none;
+		transition: .2s ease-in;
+		&:hover {
+			color: $orange;
+		}
 	}
 	&__text {
-		display: block;
+		display: flex;
+		justify-content: space-between;
+		gap: 10px;
+		font-size: 1.6rem;
+		color: rgba($green, 0.6);
 	}
 	&__copy {
 		display: block;
 	}
 	&__author {
-		display: block;
+		color: rgba($green, .6);
+		transition: .2s ease-in;
+			&:hover  {
+				color: rgba($green, 1);
+			}
 	}
 }
-// font-size: 18rem;
 // line-height: 1.2;
 .footer-social {
+	display: flex;
+	gap: 15px;
+	padding-left: 0;
 	&_item {
 		display: block;
 	}
 	&_link {
-		&_link_vk {
-			display: block;
+		box-sizing: border-box;
+		background-repeat: no-repeat;
+		background-position: center center;
+		border-radius: 100%;
+		border: 1px solid $green;
+		color: $green;
+		width: 50px;
+		height: 50px;
+		opacity: .8;
+		transition: 0.2s ease-in;
+		display: block;		
+		&_vk {
+			background-size: 23px 14px;
+			background-image: url(../images/vk.svg);
+			&:hover {
+				opacity: 1;
+			}
 		}
-		&link_inst {
-			display: block;
+		&_inst {
+			background-size: 18px 18px;
+			background-image: url(../images/instagram.svg);
+			&:hover {
+				opacity: 1;
+			}
 		}
-		&_link_fb {
-			display: block;
+		&_fb {
+			background-size: 9px 18px;
+			background-image: url(../images/facebook.svg);
+			&:hover {
+				opacity: 1;
+			}
 		}
 	}
 }

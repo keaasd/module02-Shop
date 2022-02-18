@@ -800,7 +800,7 @@ nav {
 	&__list {
 		display: flex;
 		align-items: center;
-		gap: 30px;
+		gap: 3rem;
 		padding-left: 0;
 		list-style: none;
 		margin-top: 45px;
@@ -840,9 +840,10 @@ nav {
 		color: $orange;
 	}
 }
-.contact {
+.contact {	
+	border-bottom: 1px solid #d4d6cf;	
 	padding-top: 37px;
-	padding-bottom: 100px;
+	padding-bottom: 15.8rem;
 	&-box {
 		display: flex;
 		justify-content: space-between;
@@ -955,8 +956,6 @@ nav {
 		position: relative;
 		color: rgba($green, 0.6);
 		text-decoration: none;
-		// border-bottom: 1px solid #ecedec;
-		// text-decoration-color: #ecedec; 
 		&::after {
 			content: '';
 			position: absolute;
@@ -971,10 +970,64 @@ nav {
 		&:hover {
 			color: rgba($green, 1);
 		}
-
-
 	}
 }
 footer {
 	margin-top: 3rem;
+}
+.footer {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url(../images/footer.png);
+	&__box {
+		display: block;
+	}
+	&_logo {
+		display: block;
+	}
+	&__list {
+		display: block;
+	}
+	&__item {
+		display: block;
+	}
+	&__link {
+		display: block;
+	}
+	&__contact {
+		display: block;
+	}
+	&__tel {
+		display: block;
+	}
+	&__mail {
+		display: block;
+	}
+	&__text {
+		display: block;
+	}
+	&__copy {
+		display: block;
+	}
+	&__author {
+		display: block;
+	}
+}
+// font-size: 18rem;
+// line-height: 1.2;
+.footer-social {
+	&_item {
+		display: block;
+	}
+	&_link {
+		&_link_vk {
+			display: block;
+		}
+		&link_inst {
+			display: block;
+		}
+		&_link_fb {
+			display: block;
+		}
+	}
 }

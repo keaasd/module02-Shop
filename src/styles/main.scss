@@ -875,7 +875,7 @@ nav {
 .contact {	
 	border-bottom: 1px solid #d4d6cf;	
 	padding-top: 37px;
-	padding-bottom: 15.8rem;
+	padding-bottom: 16rem;
 	&-box {
 		display: flex;
 		justify-content: space-between;
@@ -917,9 +917,9 @@ nav {
 				align-items: center;
 				gap: 3rem;
 				transition: .2s ease-in;
-				&:hover {
-					color: $orange;
-				}
+					&:hover {
+						color: $orange;
+					}
 					&::before {
 						content: '';
 						display: inline-block;
@@ -927,22 +927,24 @@ nav {
 						background-repeat: no-repeat;
 						background-size: contain;
 					}
+					&_mail {
+						&::before {
+							background-image: url(../images/mail.svg);
+							width: 29px;
+							height: 27px;
+						}	
+					}
 					&_tel {
 						&::before {
 							background-image: url(../images/phone.svg);
 							width: 29px;
-							height: 25px;
+							height: 28px;
 						}				
 					}
 			
 			}
 		}
 }	
-.contact-box__link_mail::before {
-	background-image: url(../images/mail.svg);
-	width: 29px;
-	height: 19px;
-}
 .card {
 	
 	&__title {
@@ -977,7 +979,7 @@ nav {
 	&__check {
 		font-size: 1.2rem;
 		color: rgba($green, 0.6);
-		line-height: 1.6;
+		line-height: 1.5;
 		max-width: 36rem;
 		max-width: 360px;
 		margin-top: 1.6rem;
@@ -1010,7 +1012,7 @@ nav {
 	}
 }
 footer {
-	margin-top: 3rem;
+	padding-top: 7.4rem;
 }
 .footer {
 	background-size: cover;
@@ -1019,12 +1021,14 @@ footer {
 	&__box {
 		display: flex;
 		justify-content: space-between;
-		gap: 30px;
+		gap: 10px;
 	}
 	&_logo {
 		width: 179px;
 		height: 48px;
 		background-size: contain;
+		margin-top: 1rem;
+		flex-basis: 20.2%;
 	}
 	&__list {
 		margin: 0;
@@ -1034,7 +1038,7 @@ footer {
 	}
 	&__item {
 		font-size: 1.8rem;
-		margin-bottom: 15px;
+		margin-bottom: 2rem;
 	}
 	&__link {
 		color: $green;
@@ -1047,9 +1051,9 @@ footer {
 		display: block;
 		color: $green;
 		text-decoration: none;
-		margin-bottom: 10px;
+		text-align: right;
+		margin-bottom: 2.5rem;
 		transition: .2s ease-in;
-		font-weight: 500;
 		&:hover {
 			color: $orange;
 		}
@@ -1057,6 +1061,7 @@ footer {
 	&__mail {
 		color: $green;
 		text-decoration: none;
+		font-size: 1.8rem;
 		transition: .2s ease-in;
 		&:hover {
 			color: $orange;
@@ -1068,12 +1073,14 @@ footer {
 		gap: 10px;
 		font-size: 1.6rem;
 		color: rgba($green, 0.6);
+		margin-top: 16px;
 	}
 	&__copy {
 		display: block;
 	}
 	&__author {
 		color: rgba($green, .6);
+		text-decoration: none;
 		transition: .2s ease-in;
 			&:hover  {
 				color: rgba($green, 1);
@@ -1083,8 +1090,10 @@ footer {
 // line-height: 1.2;
 .footer-social {
 	display: flex;
+	justify-content: space-between;
 	gap: 15px;
 	padding-left: 0;
+	margin-top: 3rem;
 	&_item {
 		display: block;
 	}
@@ -1101,21 +1110,21 @@ footer {
 		transition: 0.2s ease-in;
 		display: block;		
 		&_vk {
-			background-size: 23px 14px;
+			background-size: 23px auto;
 			background-image: url(../images/vk.svg);
 			&:hover {
 				opacity: 1;
 			}
 		}
 		&_inst {
-			background-size: 18px 18px;
+			background-size: 18px auto;
 			background-image: url(../images/instagram.svg);
 			&:hover {
 				opacity: 1;
 			}
 		}
 		&_fb {
-			background-size: 9px 18px;
+			background-size: auto 18px;
 			background-image: url(../images/facebook.svg);
 			&:hover {
 				opacity: 1;

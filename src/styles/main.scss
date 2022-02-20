@@ -156,8 +156,10 @@ nav {
 	}
 	&__image {
 		width: 91%;    
-		box-shadow: 30px 55px 60px -60px rgba($green, 0.8);
+		// box-shadow: 30px 55px 60px -60px rgba($green, 0.8);
+		box-shadow: 20px 20px 33px 0px rgba($green, 0.5);
 		border-radius: 100%;
+		animation: shadow infinite 5s;
 	}
 	&__btn {
 		position: absolute;
@@ -222,6 +224,7 @@ nav {
 		right: 12rem;
 		width: 11rem;
 		z-index: -1;
+		animation: zoom both 5s infinite;
 	}
 	&__avocado {
 		position: absolute;
@@ -236,6 +239,8 @@ nav {
 		bottom: 16rem;
 		left: -3.4rem;
 		z-index: -1;
+		animation: trash infinite 5s;
+		animation: trash .3s linear infinite both;
 	}
 	&__cucumber {
 		position: absolute;
@@ -243,6 +248,7 @@ nav {
 		top: -5rem;
 		left: 69rem;
 		z-index: -1;
+		animation: liines infinite linear 5s;
 	}
 	&__pepper {
 		position: absolute;
@@ -250,6 +256,7 @@ nav {
 		top: 40rem;
 		left: 4rem;
 		z-index: -1;
+		animation: zoom 5s linear infinite;
 	}
 	
 }
@@ -259,10 +266,12 @@ nav {
 	font-size: 8rem;
 	font-weight: 700;
 	line-height: 1;
+	
 	&__span {
 		font-style: italic;
 		font-weight: 700;
 		font-size: 8rem;
+		animation: typing 3s infinite;
 	}
 	&_block {
 		display: block;
@@ -589,6 +598,7 @@ nav {
 			border-radius: 100%;
 			margin-bottom: 1.5rem;
 			background-repeat: no-repeat;
+			animation: borders infinite 5s;
 			}
 		&:nth-child(1) {
 			&::before {
@@ -1134,4 +1144,89 @@ footer {
 			}
 		}
 	}
+}
+@keyframes shadow {
+	0% {
+		box-shadow: 5px 20px 33px 0px rgba($green, 0.5);
+	}
+	25% {
+		box-shadow: 10px 20px 33px 0px rgba($green, 0.5);
+	}
+	50% {
+		box-shadow: 20px 30px 33px 0px rgba($green, 0.5);
+		// box-shadow: 0px 20px 33px 0px rgba($green, 0.5);
+	}
+	75% {
+		box-shadow: -10px 20px 33px 0px rgba($green, 0.5);
+	}
+	100% {
+		box-shadow: -5px 20px 33px 0px rgba($green, 0.5);
+	}
+}
+@keyframes zoom {
+	0% {
+		transform: scale(1);
+		transform: rotate(45deg);
+
+	}
+	50% {transform: scale(1.5);
+		transform: rotate(180deg);
+	}
+	100% {transform: scale(2), rotate(50deg);
+		transform: rotate(50deg);
+	}
+	
+}
+@keyframes typing {
+	from {
+	color: $orange;
+	}
+	to {
+	color: $green;
+	}
+}
+@keyframes trash {
+	0% {
+		transform:translate(0)
+	   }
+	   20% {
+		transform:translate(-2px,2px)
+	   }
+	   40% {
+		transform:translate(-2px,-2px)
+	   }
+	   60% {
+		transform:translate(2px,2px)
+	   }
+	   80% {
+		transform:translate(2px,-2px)
+	   }
+	   to {
+		transform:translate(0)
+	   }
+}
+@keyframes liines {
+	0% {		
+		left: 69rem;
+	}
+	25% {left: 40rem;	
+		transform: rotate(180deg);
+	}
+	50% {left: 20rem;}
+	100% {left: 69rem;}
+}
+
+@keyframes borders {
+	0% {		
+		border-top-left-radius: 60%;
+		border-bottom-right-radius: 60%;
+	}	
+	25% {border-bottom-left-radius: 60%;
+		border-top-right-radius: 60%;
+	}
+	75% {border-top-left-radius: 60%;
+		border-bottom-right-radius: 60%;
+	}
+	100% {border-radius: 100%;
+		}
 }

@@ -370,25 +370,25 @@ nav {
 			background-size: 97%;		
 			background-image: url(../images/milk.png);
 			transition: .2s ease-in;	
-			&:hover {
-				background-size: cover;	
-			}
+			// &:hover {
+			// 	background-size: cover;	
+			// }
 		}
 		&_pasta {
 			background-size: cover;
 			background-image: url(../images/pasta.png);
 			transition: .2s ease-in;
-			&:hover {
-				background-size: 103%;	
-			}
+			// &:hover {
+			// 	background-size: 103%;	
+			// }
 		}
 		&_steaks {
 			background-size: cover;
 			background-image: url(../images/steaks.png);
 			transition: .2s ease-in;
-			&:hover {
-				background-size: 103%;	
-			}
+			// &:hover {
+			// 	background-size: 103%;	
+			// }
 		}
 		&__title {
 			padding: 0;
@@ -1043,6 +1043,9 @@ footer {
 	&__link {
 		color: $green;
 		text-decoration: none;
+		&:hover {
+			color: $orange;
+		}
 	}
 	&__contact {
 		font-size: 2.7rem;

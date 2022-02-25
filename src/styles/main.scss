@@ -5,6 +5,18 @@ $orange: #d26a22;
 $white: rgb(255, 255, 255);
 $font-cormorant: "Cormorant", serif;
 $font-jost: 'Jost', sans-serif;
+
+$r_minmob: 320px;
+$r_mob_360: 360px;
+$r_mob_400: 400px;
+$r_mob_500: 500px;
+$r_tab: 768px;
+$r_tab_900: 900px;
+$r_desk: 1000px;
+$r_desk_hd: 1200px;
+$r_desk_1280: 1280px;
+$r_desk_wxga_xxl: 1360px;
+
 html, body {
 	margin: 0;
 	padding: 0;
@@ -33,15 +45,25 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	gap: 5%;
+	@media (max-width: $r_desk_1280) {
+		gap: 3%;
+	}
+	@media (max-width: $r_mob_500) {
+		padding: 2rem 15px 0;
+	}
 	&__flex-left {
 		display: flex;
 		gap: 12rem;
 		align-items: center;
 	}
-	&__flex-right {
+	&__buttons {
 		display: flex;
 		gap: 8rem;
 		align-items: center;
+		@media (max-width: $r_desk_1280) {
+			gap: 1.5rem;
+		}
 	}
 	&__nav {
 		display: flex;
@@ -49,6 +71,9 @@ body {
 		margin: 0;
 		padding-left: 0;
 		gap: 4.8rem;
+		@media (max-width: $r_desk_hd) {
+			gap: 2.5rem;
+		} 
 	}
 	&__link {
 		text-decoration: none;
@@ -64,8 +89,58 @@ body {
 		font-weight: 500;
 		letter-spacing: .12rem;
 		transition: .2s ease-in;
+		@media (max-width: $r_desk_1280) {
+			display: none;
+		}
 		&:hover {
 			color: $orange;
+		}
+	}
+	&__phone, &__menu {
+		display: none;
+	}
+	&__phone {
+		@media (max-width: $r_desk_1280) {
+			display: block;
+			background-image: url(../images/tel.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 1.6rem 1.4rem;
+			background-color: $white;
+			width: 4rem;
+			height: 4rem;
+			border-radius: 100%;
+			border: 1px solid $green;
+			text-decoration: none;
+			transition: .2s ease-in;
+			opacity: .8;
+			&:hover {
+				opacity: 1;
+				background-color: $white;
+			}
+		}
+	}
+	&__menu {
+		display: none;
+		@media (max-width: $r_tab_900) {
+			display: block;
+			background-image: url(../images/menu.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 1.6rem 1.4rem;
+			background-color: $white;
+			width: 4rem;
+			height: 4rem;
+			border-radius: 100%;
+			border: 1px solid $green;
+			text-decoration: none;
+			cursor: pointer;
+			transition: .2s ease-in;
+			opacity: .8;
+			&:hover {
+				opacity: 1;
+				background-color: $white;
+			}
 		}
 	}
 	&__cart {
@@ -80,11 +155,22 @@ body {
 		border-radius: 100%;
 		border: 1px solid $orange;
 		text-decoration: none;
+		cursor: pointer;
 		position: relative;
 		transition: .2s ease-in;
+		@media (max-width: $r_desk_1280) {
+			background-image: url(../images/cart-moby.svg);
+			background-color: $white;
+			border: 1px solid $green;
+			opacity: .8;
+		}
 		&:hover {
 			background-color: $green;
 			border: 1px solid $green;
+			@media (max-width: $r_desk_1280) {
+				background-color: $white;
+				opacity: 1;
+			}
 		}
 	}
 	&__counter {
@@ -93,6 +179,9 @@ body {
 		position: absolute;
 		top: 0.55rem;
 		right: 0.65rem;
+		@media (max-width: $r_desk_1280) {
+			color: $green;
+		}
 	}
 }
 .logo {
@@ -102,16 +191,24 @@ body {
 	background-size: contain;
 	width: 12rem;
 	height: 3.2rem;
-	margin-right: 10px;
 	transform: scale(1);
 	transition: .2s ease-in;
 	&:hover {
 		transform: scale(1.1112);
 	}
 }
-nav {	
+.navigation {	
 	flex-basis: 56.8%;
+	@media (max-width: $r_desk_1280) {
+		flex-basis: 0;
+	}
+	@media (max-width: $r_tab_900) {
+		display: none;
+	}
 }
+
+
+
 .main {
 	position: relative;
 	// background-image: url(../images/main.png);

@@ -6,6 +6,7 @@ $white: rgb(255, 255, 255);
 $font-cormorant: "Cormorant", serif;
 $font-jost: 'Jost', sans-serif;
 
+
 $r_minmob: 320px;
 $r_mob_360: 360px;
 $r_mob_400: 400px;
@@ -14,8 +15,10 @@ $r_tab: 768px;
 $r_tab_900: 900px;
 $r_desk: 1000px;
 $r_desk_hd: 1200px;
+$r_desk_1120: 1120px;
 $r_desk_1280: 1280px;
-$r_desk_wxga_xxl: 1360px;
+$r_desk_1350: 1350px;
+$r_desk_full_1750: 1750px;
 
 html, body {
 	margin: 0;
@@ -37,6 +40,9 @@ body {
 	margin: 0 auto;
 	padding-left: 15px;
 	padding-right: 15px;
+	@media (max-width: $r_tab) {
+		max-width: 600px;
+	}
 }
 .header  {
 	max-width: 1440px;
@@ -48,6 +54,9 @@ body {
 	gap: 5%;
 	@media (max-width: $r_desk_1280) {
 		gap: 3%;
+	}
+	@media (max-width: $r_desk_1120) {
+		margin-bottom: 0;
 	}
 	@media (max-width: $r_mob_500) {
 		padding: 2rem 15px 0;
@@ -211,28 +220,48 @@ body {
 
 .main {
 	position: relative;
-	// background-image: url(../images/main.png);
-	background-size: cover;
-	background-position-x: center;
-	background-repeat: no-repeat;
 	padding-bottom: 187px;
 	z-index: 0;
+	@media (max-width: $r_desk_1120) {
+		padding-bottom: 12.8rem;
+	}
 	&__text {
 		margin-top: 39px;
+		@media (max-width: $r_desk_1120) {
+			flex-basis: 395px;
+		}
+		@media (max-width: $r_tab) {
+			text-align: center;
+			flex-basis: 100%;
+			margin-top: 0;
+		}
 	}
 	&__item {
 		margin-left: 12rem;
 		max-width: 378px;
 		margin-top: 6rem;
+		@media (max-width: $r_desk_1350) {
+			margin-left: 8rem;
+		}
+		@media (max-width: $r_tab) {
+			max-width: 100%;
+			margin-left: 0;
+			margin-top: 3rem;
+		}
 	}
 	&__link {
 		margin-top: 5.4rem;
+		text-align: center;
 	}
 	&__flex {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		gap: 30px;
+		@media (max-width: $r_desk_1120) {
+			padding-top: 3rem;
+			padding-bottom: 9rem;
+		}
 	}
 	&__cover {
 		position: relative;
@@ -244,6 +273,22 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		@media (max-width: $r_desk_1350) {
+			flex-basis: 650px;
+			height: 650px;
+		}
+		@media (max-width: $r_desk_hd) {
+			flex-basis: 600px;
+			height: 600px;
+		}
+		@media (max-width: $r_desk_1120) {
+			flex-basis: calc(100% - 395px);
+			height: auto;
+			border: none;
+		}
+		@media (max-width: $r_tab) {
+			display: none;
+		}
 	}
 	&__line {
 		display: flex;
@@ -252,9 +297,20 @@ body {
 		align-items: center;
 		width: 658px;
 		height: 658px;
-		// box-shadow: 0 0 0 1px rgba($green, 0.4), 0 0 0 53px rgba($green, 0), 0 0 0 54px rgba($green, 0.4);
 		border: 1px solid rgba($green, 0.4);
 		border-radius: 100%;
+		@media (max-width: $r_desk_1350) {
+			width: 600px;
+			height: 600px;
+		}
+		@media (max-width: $r_desk_hd) {
+			border: 1px solid transparent;
+			width: auto;
+			height: auto;
+		}
+		@media (max-width: $r_desk_1120) {
+			border: none;
+		}
 	}
 	&__image {
 		width: 91%;    
@@ -262,6 +318,18 @@ body {
 		box-shadow: 20px 20px 33px 0px rgba($green, 0.5);
 		border-radius: 100%;
 		animation: shadow infinite 5s;
+	}
+	&__imagemoby {
+		display: none;
+		@media (max-width: $r_tab) {
+			max-width: 300px;
+			display: block;
+			margin: 0 auto;
+			margin-top: 3rem;
+			border-radius: 100%;
+			animation: shadow infinite 5s;
+		}
+		
 	}
 	&__btn {
 		position: absolute;
@@ -297,6 +365,16 @@ body {
 			right: -35px;
 			transition: 0.2s ease-in;
 		}
+		@media (max-width: $r_desk_1350) {
+			top: 7.5%;
+			left: 3%;
+		}
+		@media (max-width: $r_desk_hd) {
+			top: 6.5%;
+		}
+		@media (max-width: $r_desk_1120) {
+			display: none;
+		}
 	}
 	&__btn_2 {
 		top: 190px;
@@ -306,6 +384,16 @@ body {
 			top: 20px;
 			left: -25px;
 		}
+		@media (max-width: $r_desk_1350) {
+			top: 11%;
+			right: 6%;
+		}
+		@media (max-width: $r_desk_hd) {
+			top: 4.5%;
+		}
+		@media (max-width: $r_desk_1120) {
+			display: none;
+		}
 	}
 	&__btn_3 {
 		bottom: -51px;
@@ -314,6 +402,15 @@ body {
 			content: '';
 			top: -21px;
 			left: 12px;
+		}
+		@media (max-width: $r_desk_1350) {
+			bottom: -9.5%;
+		}
+		@media (max-width: $r_desk_hd) {
+			bottom: -10.5%;
+		}
+		@media (max-width: $r_desk_1120) {
+			display: none;
 		}
 	}
 	&__food {
@@ -327,6 +424,19 @@ body {
 		width: 11rem;
 		z-index: -1;
 		animation: zoom both 5s infinite;
+		@media (max-width: $r_desk_full_1750) {
+			width: 9rem;
+			bottom: 3%;
+			right: 4%;
+		}
+		@media (max-width: $r_desk_1120) {
+			bottom: 19%;
+			right: 1%;
+		}
+		@media (max-width: $r_tab) {
+			top: 9%;
+			left: -2rem;
+		}
 	}
 	&__avocado {
 		position: absolute;
@@ -334,6 +444,11 @@ body {
 		top: 5rem;
 		right: 3.2rem;
 		z-index: -1;
+		@media (max-width: $r_desk_full_1750) {
+			height: 10.9rem;
+			top: 11%;
+			right: -1%;
+		}
 	}
 	&__breans {
 		position: absolute;
@@ -341,8 +456,10 @@ body {
 		bottom: 16rem;
 		left: -3.4rem;
 		z-index: -1;
-		animation: trash infinite 5s;
-		animation: trash .3s linear infinite both;
+		animation: trash 4.3s linear infinite both;
+		@media (max-width: $r_desk_full_1750) {
+			width: 11rem;
+		}
 	}
 	&__cucumber {
 		position: absolute;
@@ -350,7 +467,7 @@ body {
 		top: -5rem;
 		left: 69rem;
 		z-index: -1;
-		animation: liines infinite linear 5s;
+		animation: liines infinite linear 30s;
 	}
 	&__pepper {
 		position: absolute;
@@ -359,6 +476,12 @@ body {
 		left: 4rem;
 		z-index: -1;
 		animation: zoom 5s linear infinite;
+		@media (max-width: $r_desk_full_1750) {
+			top: 44%;
+		}
+		@media (max-width: $r_desk_1120) {
+			top: 37%;
+		}
 	}
 	
 }
@@ -368,12 +491,26 @@ body {
 	font-size: 8rem;
 	font-weight: 700;
 	line-height: 1;
-	
+	@media (max-width: $r_desk_1350) {
+		font-size: 7rem;
+	}
+	@media (max-width: $r_desk_1120) {
+		font-size: 6rem;
+	}
+	@media (max-width: $r_tab) {
+		text-align: center;
+	}
 	&__span {
 		font-style: italic;
 		font-weight: 700;
 		font-size: 8rem;
 		animation: typing 3s infinite;
+		@media (max-width: $r_desk_1350) {
+			font-size: 7rem;
+		}
+		@media (max-width: $r_desk_1120) {
+			font-size: 6rem;
+		}
 	}
 	&_block {
 		display: block;
@@ -388,6 +525,9 @@ body {
 	&_size-s {
 		font-size: 1.8rem;
 		line-height: 1.5;
+		@media (max-width: $r_desk_1350) {
+			font-size: 1.6rem;
+		}
 	}
 	&_size-m {
 		font-size: 2.4rem;
@@ -407,6 +547,12 @@ body {
 	letter-spacing: 0.13rem;
 	border: none;
 	transition: .2s ease-in;
+	@media (max-width: $r_desk_1350) {
+		font-size: 1.4em;
+	}
+	@media (max-width: $r_desk_hd) {
+		font-size: 1.2em;
+	}
 	&:hover {
 		box-shadow: .48rem .87rem .65rem rgba(207,92,13,0.2);
 		background-color: #bf601f;
@@ -423,9 +569,6 @@ body {
 }
 .offer {
 	position: relative;
-	// background-image: url(../images/offer.png);
-	// background-size: cover;
-	// background-repeat: no-repeat;
 	padding-top: 2rem;
 	padding-bottom: 12.8rem;
 	&__text {
@@ -481,17 +624,11 @@ body {
 			background-size: 97%;		
 			background-image: url(../images/milk.png);
 			transition: .2s ease-in;	
-			// &:hover {
-			// 	background-size: cover;	
-			// }
 		}
 		&_pasta {
 			background-size: cover;
 			background-image: url(../images/pasta.png);
 			transition: .2s ease-in;
-			// &:hover {
-			// 	background-size: 103%;	
-			// }
 		}
 		&_steaks {
 			background-size: cover;
@@ -670,6 +807,9 @@ body {
 		margin-left: 12rem;
 		margin-top: 2rem;
 		flex-basis: 58rem;
+		@media (max-width: $r_desk_1350) {
+			margin-left: 8rem;
+		}
 		
 	}
 	&__list {
@@ -899,6 +1039,9 @@ body {
 		margin-top: 7.4rem;
 		margin-left: 12rem;
 		gap: 11.5%;
+		@media (max-width: $r_desk_1350) {
+			margin-left: 8rem;
+		}
 	}
 	&__payment {
 		flex-basis: 37%;
@@ -1012,6 +1155,9 @@ body {
 			&__holder {
 				margin-top: 6.2rem;
 				margin-left: 12rem;
+				@media (max-width: $r_desk_1350) {
+					margin-left: 8rem;
+				}
 			}
 			&__list {
 				padding-left: 0;
@@ -1269,14 +1415,14 @@ footer {
 @keyframes zoom {
 	0% {
 		transform: scale(1);
-		transform: rotate(45deg);
+		transform: rotate(5deg);
 
 	}
 	50% {transform: scale(1.5);
-		transform: rotate(180deg);
+		transform: rotate(15deg);
 	}
 	100% {transform: scale(2), rotate(50deg);
-		transform: rotate(50deg);
+		transform: rotate(5deg);
 	}
 	
 }

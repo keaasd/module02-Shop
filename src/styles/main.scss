@@ -442,7 +442,7 @@ body {
 			right: 1%;
 		}
 		@media (max-width: $r_tab) {
-			top: 9%;
+			top: 12%;
 			left: -2rem;
 		}
 	}
@@ -495,7 +495,7 @@ body {
 			top: 44%;
 		}
 		@media (max-width: $r_desk_1120) {
-			top: 37%;
+			top: 40%;
 		}
 	}
 	
@@ -810,6 +810,7 @@ body {
 			@media (max-width: $r_tab) {
 				min-height: 83px;
 				margin-top: 0.2rem;
+				max-width: 100%;
 			}
 		}
 		&_price {
@@ -1004,7 +1005,6 @@ body {
 	}
 	&__item {
 		margin-top: 3.7rem;
-		margin-bottom: 112px;
 	}
 	&__list {
 		padding-left: 0;
@@ -1021,13 +1021,14 @@ body {
 			padding: 40px 0;
 		}
 	}
+	&__text {		
+		margin-bottom: 112px;
+		@media (max-width: $r_tab) {
+			margin-bottom: 60px;
+		}
+	}
+
 	
-}
-.catalog .container {
-	// @media (max-width: $r_tab) {
-	// 	padding-right: 0;
-	// 	max-width: 100%;
-	// }
 }
 .category {		
 	&__item {
@@ -1202,6 +1203,7 @@ body {
 		color: $green;
 		text-decoration: none;
 		transition: .2s ease-in;
+		cursor: pointer;
 		&:hover {
 			color: $orange;
 			&:after {
@@ -1298,7 +1300,8 @@ body {
 				border: 2px solid rgba($green, 0.4);
 				border-radius: 2rem;
 				@media (max-width: $r_desk) {
-					flex-basis: 370px;
+					// flex-basis: 370px;
+					flex-shrink: 2;
 				}
 			}
 			&__holder {
@@ -1398,6 +1401,11 @@ body {
 	&__link {
 		margin-top: 1.2rem;
 		padding: 2.3rem 4.8rem;
+		@media (max-width: $r_tab_900) {
+			padding: 2.1rem 4.3rem;
+			margin: 1.2rem auto 0;
+			font-size: 1em;
+		}
 	}
 	&__docs {
 		position: relative;
@@ -1430,6 +1438,11 @@ footer {
 		display: flex;
 		justify-content: space-between;
 		gap: 10px;
+		@media (max-width: $r_tab) {
+			flex-direction: column;
+			justify-content: start;
+			align-items: center;
+		}
 	}
 	&_logo {
 		width: 179px;
@@ -1437,6 +1450,10 @@ footer {
 		background-size: contain;
 		margin-top: 1rem;
 		flex-basis: 20.2%;
+		@media (max-width: $r_desk) {
+			flex-basis: 13%;
+		}
+
 	}
 	&__list {
 		margin: 0;

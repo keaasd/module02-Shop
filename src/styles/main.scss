@@ -13,9 +13,10 @@ $r_mob_400: 400px;
 $r_mob_500: 500px;
 $r_tab: 768px;
 $r_tab_900: 900px;
-$r_desk: 1000px;
+$r_desk: 999px;
 $r_desk_hd: 1200px;
 $r_desk_1120: 1120px;
+$r_desk_1170: 1170px;
 $r_desk_1280: 1280px;
 $r_desk_1350: 1350px;
 $r_desk_1400: 1400px;
@@ -615,7 +616,6 @@ body {
 	overflow: hidden;
 	padding-top: 9.5rem;
 	@media (max-width: $r_tab) {
-		max-width: 450px;
 		margin: 0 auto;
 		padding-top: 5.4rem;
 		padding-bottom: 6rem;
@@ -650,6 +650,9 @@ body {
 		transition: .2s ease-in;
 		@media (max-width: $r_desk_hd) {
 			background-color: #ffffff;
+		}
+		@media (max-width: $r_tab) {
+			text-align: center;
 		}
 		&_white {
 			padding: 3.9rem 3.7rem;
@@ -711,8 +714,12 @@ body {
 			color: $green;
 			font-weight: 700;
 			font-family: $font-cormorant;
-			@media (max-width: $r_desk_1120) {
+			@media (max-width: $r_desk_1170) {
 				font-size: 2.7rem;
+			}
+			@media (max-width: $r_tab) {
+				font-size: 2.6rem;
+				min-height: 69px;
 			}
 		}
 		&__hover {
@@ -759,9 +766,12 @@ body {
 		}
 		&_hight {
 			padding: 2.9rem 3.7rem 4rem;
-			@media (max-width: $r_desk_1120) {
+			@media (max-width: $r_desk_1170) {
 				padding: 2.5rem 2.4rem 3.5rem;
 			}
+			// @media (max-width: $r_desk_1120) {
+			// 	padding: 2.5rem 2.4rem 3.5rem;
+			// }
 		}
 		&_cover {
 			position: relative;
@@ -769,6 +779,9 @@ body {
 			width: 100%;
 			height: 322px;
 			text-align: center;
+			@media (max-width: $r_tab) {
+				height: 200px;
+			}
 		}
 		&_image {
 			max-width: 351px;
@@ -781,6 +794,9 @@ body {
 			justify-content: space-between;
 			align-items: center;
 			margin-top: 3.3rem;
+			@media (max-width: $r_tab) {
+				justify-content: center;
+			}
 		}
 		&_description {
 			padding: 0;
@@ -791,6 +807,10 @@ body {
 			font-size: 1.8rem;
 			margin-bottom: 1px;
 			min-height: 69px;
+			@media (max-width: $r_tab) {
+				min-height: 83px;
+				margin-top: 0.2rem;
+			}
 		}
 		&_price {
 			font-size: 2.4rem;
@@ -831,6 +851,10 @@ body {
 } 
 .counter {
 	display: flex;
+	
+	@media (max-width: $r_tab) {
+		display: none;
+	}
 	&_btn {
 		cursor: pointer;
 		width: 50px;
@@ -991,8 +1015,19 @@ body {
 			flex-wrap: wrap;
 			gap: 70px 20px;
 		}
+		@media (max-width: $r_tab) {
+			flex-wrap: nowrap;
+			overflow-x: scroll;
+			padding: 40px 0;
+		}
 	}
 	
+}
+.catalog .container {
+	// @media (max-width: $r_tab) {
+	// 	padding-right: 0;
+	// 	max-width: 100%;
+	// }
 }
 .category {		
 	&__item {

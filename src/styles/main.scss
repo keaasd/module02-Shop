@@ -679,9 +679,9 @@ body {
 		@media (max-width: $r_desk_hd) {
 			background-color: #ffffff;
 		}
-		@media (max-width: $r_tab) {
-			text-align: center;
-		}
+		// @media (max-width: $r_tab) {
+		// 	text-align: center;
+		// }
 		&_white {
 			padding: 3.9rem 3.7rem;
 			background-repeat: no-repeat;
@@ -693,6 +693,9 @@ body {
 			transition: .2s ease-in;
 			@media (max-width: $r_desk_hd) {
 				height: 400px;
+			}
+			@media (max-width: $r_tab) {
+				height: 300px;
 			}
 			&:hover {
 				.swiper-slide__hover {
@@ -720,20 +723,26 @@ body {
 		&_milk {
 			background-size: 97%;		
 			background-image: url(../images/milk.png);
-			transition: .2s ease-in;	
+			transition: .2s ease-in;
+			@media (max-width: $r_tab) {
+				background-size: 170px auto;
+			}	
 		}
 		&_pasta {
 			background-size: cover;
 			background-image: url(../images/pasta.png);
 			transition: .2s ease-in;
+			@media (max-width: $r_tab) {
+				background-size: 170px auto;
+			}
 		}
 		&_steaks {
 			background-size: cover;
 			background-image: url(../images/steaks.png);
 			transition: .2s ease-in;
-			// &:hover {
-			// 	background-size: 103%;	
-			// }
+			@media (max-width: $r_tab) {
+				background-size: 170px auto;
+			}
 		}
 		&__title {
 			padding: 0;
@@ -1420,6 +1429,7 @@ body {
 					flex-direction: column;					
 					margin-left: 0;
 					margin-top: 4rem;
+					margin-bottom: 6.2rem;
 				}
 			}
 			&__list {
@@ -1428,6 +1438,8 @@ body {
 				list-style: none;
 				@media (max-width: $r_tab) {
 					text-align: center;
+					padding-top: 2.4rem;
+					margin: 0;
 				}
 			}
 			&__items {
@@ -1580,6 +1592,7 @@ footer {
 			flex-direction: column;
 			justify-content: start;
 			align-items: center;
+			gap: 0;
 		}
 	}
 	&_logo {
@@ -1610,16 +1623,23 @@ footer {
 			display: flex;
 			gap: 32px;
 			justify-content: space-between;
+			margin-bottom: 28px;
 		}
 	}
 	&__item {
 		font-size: 1.8rem;
 		margin-bottom: 2rem;
+		@media (max-width: $r_tab) {
+			margin-bottom: 0;
+		}
 	}
 	&_column {
 		flex-direction: column;
 		gap: initial;
 		align-items: center;
+		@media (max-width: $r_tab) {
+			gap: 13px;
+		}
 	}
 	&__link {
 		color: $green;
@@ -1630,6 +1650,9 @@ footer {
 	}
 	&__contact {
 		font-size: 2.7rem;
+		@media (max-width: $r_tab) {
+			text-align: center;
+		}
 	}
 	&__tel {
 		display: block;
@@ -1641,6 +1664,10 @@ footer {
 		&:hover {
 			color: $orange;
 		}
+		@media (max-width: $r_tab) {
+			font-size: 3rem;
+			margin-bottom: 1.3rem;
+		}
 	}
 	&__mail {
 		color: $green;
@@ -1649,6 +1676,10 @@ footer {
 		transition: .2s ease-in;
 		&:hover {
 			color: $orange;
+		}
+		@media (max-width: $r_tab) {
+			display: block;
+			margin: 0 auto;
 		}
 	}
 	&__text {
@@ -1661,10 +1692,19 @@ footer {
 		@media (max-width: $r_tab) {
 			display: block;
 			text-align: center;
+			margin-top: 2.8rem;
 		}
 	}
 	&__copy {
 		display: block;
+		@media (max-width: $r_tab) {
+			margin: 0;
+		}
+	}
+	&__frontend-block {
+		@media (max-width: $r_tab) {
+			margin-top: 9px;
+		}
 	}
 	&__author {
 		color: rgba($green, .6);
@@ -1682,6 +1722,11 @@ footer {
 	gap: 15px;
 	padding-left: 0;
 	margin-top: 3rem;
+	@media (max-width: $r_tab) {
+		margin-top: 4rem;
+		margin-bottom: 0;
+
+	}
 	&_item {
 		display: block;
 	}

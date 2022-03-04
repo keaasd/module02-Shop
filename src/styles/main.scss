@@ -687,6 +687,7 @@ body {
 		}
 		@media (max-width: $r_tab) {
 			text-align: center;
+			align-items: center;
 		}
 		&_white {
 			padding: 3.9rem 3.7rem;
@@ -699,6 +700,8 @@ body {
 			transition: .2s ease-in;
 			@media (max-width: $r_desk_hd) {
 				height: 400px;
+				background-size: 50%;
+				background-position: top;
 			}
 			@media (max-width: $r_tab) {
 				height: 300px;
@@ -709,6 +712,9 @@ body {
 					height: 233px;
 					opacity: 1;				
 					background-size: 104%;
+						@media (max-width: $r_tab) {
+							height: auto;
+						}
 					}
 				&::after {
 						content: "";
@@ -748,7 +754,8 @@ body {
 			background-image: url(../images/steaks.png);
 			transition: .2s ease-in;
 			@media (max-width: $r_tab) {
-				background-size: 170px auto;
+				background-size: 170px auto;				
+				background-image: url(../images/steaks-tab.png);
 			}
 		}
 		&__title {
@@ -763,7 +770,9 @@ body {
 			}
 			@media (max-width: $r_tab) {
 				font-size: 2.6rem;
-				min-height: 69px;
+				// min-height: 69px;
+				min-height: auto;
+				margin-bottom: 16px;
 			}
 			@media (max-width: $r_mob_567) {
 				font-size: 1.4em;
@@ -772,6 +781,11 @@ body {
 		&__hover {
 			opacity: 0;
 			height: 0;
+			@media (max-width: $r_tab) {
+				height: auto;
+				opacity: 1;
+				margin: 0 auto;
+			}
 		}
 		&__text {
 			padding: 0;
@@ -785,6 +799,9 @@ body {
 			&:hover {
 				opacity: 1;
 			}
+			@media (max-width: $r_tab) {
+				display: none;
+			}
 		}
 		&__link {
 			display: flex;
@@ -796,6 +813,9 @@ body {
 			letter-spacing: 0.1rem;
 			font-weight: 500;	
 			transition: .2s ease-in;
+			@media (max-width: $r_tab) {
+				margin: 0 auto;
+			}
 			&::before {
 				content: "";
 				background-image: url(../images/swiper-plus.svg);
@@ -805,6 +825,9 @@ body {
 				width: 3rem;
 				height: 3rem;
 				margin-right: 2.1rem;
+				@media (max-width: $r_tab) {
+					margin-right: 1rem;
+				}
 			}
 			&:hover {
 				opacity: 1;
@@ -1485,7 +1508,7 @@ body {
 					// text-align: center;
 					padding-top: 2.4rem;
 					margin: 0;
-					gap: 1rem;
+					gap: 3rem;
 				}
 			}
 			&__items {
@@ -1503,6 +1526,7 @@ body {
 				transition: .2s ease-in;
 				@media (max-width: $r_tab) {
 					gap: 1rem;
+					font-size: 2.2rem;
 				}
 					&:hover {
 						color: $orange;

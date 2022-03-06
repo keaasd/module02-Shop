@@ -35,7 +35,7 @@ var swiper = new Swiper(".offerSwiper", {
           slidesPerView: 2,
           spaceBetween: 2
         },
-        1200: {
+        1121: {
           slidesPerView: 3,
           spaceBetween: 3
         }

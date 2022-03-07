@@ -33,7 +33,7 @@ var swiper = new Swiper(".offerSwiper", {
         },
         768: {
           slidesPerView: 2,
-          spaceBetween: 2
+          spaceBetween: 1
         },
         1121: {
           slidesPerView: 3,

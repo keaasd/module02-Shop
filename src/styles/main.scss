@@ -653,7 +653,7 @@ body {
 		margin: 0 auto;
 		padding-top: 5.4rem;
 		padding-bottom: 6rem;
-		max-width: 450px;
+		// max-width: 450px;
 	}
 }
 .swiper-horizontal > .swiper-pagination-bullets {
@@ -710,6 +710,7 @@ body {
 				height: 300px;
 				background-size: 200px;
 				background-position-x: center;
+				padding: 2rem 3.0rem;
 			}
 			&:hover {
 				.swiper-slide__hover {

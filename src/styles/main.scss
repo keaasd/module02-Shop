@@ -289,12 +289,18 @@ body {
 			margin-left: 0;
 			margin-top: 3rem;
 		}
+		@media (max-width: $r_mob_360) {
+			margin-top: 2.5rem;
+		}
 	}
 	&__link {
 		margin-top: 5.4rem;
 		text-align: center;
 		@media (max-width: $r_mob_500) {			
 			margin-top: 3.6rem;
+		}
+		@media (max-width: $r_mob_360) {
+			margin-top: 4rem;
 		}
 	}
 	&__flex {
@@ -308,6 +314,9 @@ body {
 		}
 		@media (max-width: $r_tab) {
 			padding-bottom: 0;
+		}
+		@media (max-width: $r_mob_360) {
+			padding-top: 4rem;
 		}
 	}
 	&__cover {
@@ -589,7 +598,7 @@ body {
 		text-align: center;
 	}
 	@media (max-width: $r_mob_360) {
-		font-size: 3rem;
+		font-size: 3.75rem;
 	}
 	&__span {
 		font-style: italic;
@@ -603,7 +612,7 @@ body {
 			font-size: 6rem;
 		}
 		@media (max-width: $r_mob_360) {
-			font-size: 3rem;
+			font-size: 3.75rem;
 		}
 	}
 	&_block {
@@ -633,6 +642,10 @@ body {
 			max-width: 350px;
 			margin: 0 auto;
 		}
+		@media (max-width: $r_mob_360) {
+			max-width: 245px;
+			font-size: 1.5rem;
+		}
 	}
 	&_size-m {
 		font-size: 2.4rem;
@@ -645,6 +658,15 @@ body {
 			max-width: 350px;
 			margin: 0 auto;
 		}
+		@media (max-width: $r_mob_360) {
+			font-size: 1.5rem;
+		}
+	}
+	&_size-moby {
+		@media (max-width: $r_mob_360) {
+			max-width: 290px;
+		}
+		
 	}
 
 }
@@ -670,6 +692,10 @@ body {
 		font-size: 1.2rem;
 		padding: 16px 26px 18px;
 	}
+	@media (max-width: $r_mob_360) {
+		font-size: 1.5rem;
+		padding: 17px 23px 15px;
+	}
 	&:hover {
 		box-shadow: .48rem .87rem .65rem rgba(207,92,13,0.2);
 		background-color: #bf601f;
@@ -680,9 +706,15 @@ body {
 		@media (max-width: $r_desk_1350) {
 			// padding-left: 10px;
 			// padding-right: 10px;
-			font-size: 1em;
+			font-size: 1rem;
 			// flex-grow: 1;
 			// text-align: center;
+		}
+		@media (max-width: $r_mob_360) {
+			font-size: 1.25rem;
+			padding-left: 30px;
+			padding-right: 30px;
+			flex-grow: 0;
 		}
 	}
 	&_min {
@@ -710,7 +742,14 @@ body {
 	}
 	&__text {
 		margin-top: 6rem;
-		max-width: 700px;
+		max-width: 700px;		
+		@media (max-width: $r_mob_360) {
+			max-width: 200px;
+			margin: 4rem auto 0;
+		}
+	}
+	@media (max-width: $r_mob_360) {
+		padding-top: 4.3rem;
 	}
 }
 .slider {
@@ -720,11 +759,13 @@ body {
 		margin: 0 auto;
 		padding-top: 5.4rem;
 		padding-bottom: 6rem;
-		
 	}
 	@media (max-width: $r_mob_500) {
 		max-width: 210px;
 		padding-bottom: 7rem;
+	}
+	@media (max-width: $r_mob_360) {
+		padding-top: 4.6rem;
 	}
 }
 .swiper-horizontal > .swiper-pagination-bullets {
@@ -735,7 +776,7 @@ body {
 		bottom: -50px;
 	}
 	@media (max-width: $r_mob_500) {
-		bottom: -36px;
+		bottom: -40px;
 	}
 	
 }
@@ -824,9 +865,10 @@ body {
 			@media (max-width: $r_desk_1120) {
 				// background-size: 100%;
 			}	
-			@media (max-width: $r_tab) {
-				// background-size: 170px auto;
-			}	
+			@media (max-width: $r_mob_360) {
+				background-position: 16% 0%;
+				background-size: auto 158px;
+			}
 		}
 		&_pasta {
 			// background-size: cover;
@@ -981,6 +1023,9 @@ body {
 			@media (max-width: $r_tab) {
 				justify-content: center;
 			}
+			@media (max-width: $r_mob_360) {
+				margin-top: 2.2rem;
+			}
 		}
 		&_description {
 			padding: 0;
@@ -998,8 +1043,10 @@ body {
 				margin: 0.2rem auto 0;
 			}
 			@media (max-width: $r_mob_500) {
-				// font-size: 1.2rem;
 				min-height: 64px;
+			}
+			@media (max-width: $r_mob_360) {
+				font-size: 1.5rem;
 			}
 		}
 		&_price {
@@ -1009,8 +1056,15 @@ body {
 			@media (max-width: $r_mob_567) {
 				font-size: 1.4rem;
 			}
+			@media (max-width: $r_mob_360) {
+				font-size: 1.75rem;
+				margin-top: 0px;
+			}
 		}
 		
+	}
+	&-trands_title {
+		margin-bottom: 10px;
 	}
 	&-pagination {
 		display: none;
@@ -1094,6 +1148,10 @@ body {
 		text-align: center;
 		flex-grow: 1;
 		}
+		@media (max-width: $r_mob_360) {
+			flex-grow: 0;
+			padding: 15px 27px 14px;
+		}
 	}
 }
 .about {
@@ -1101,6 +1159,9 @@ body {
 	padding-bottom: 147px;
 	@media (max-width: $r_tab) {
 		padding-bottom: 6.8rem;
+	}
+	@media (max-width: $r_mob_360) {
+		padding-top: 0.8rem;
 	}
 	&__box {
 		display: flex;
@@ -1114,6 +1175,9 @@ body {
 		@media (max-width: $r_tab) {
 			display: block;
 			margin-top: 3rem;
+		}
+		@media (max-width: $r_mob_360) {
+			margin-top: 3.8rem;
 		}
 	}
 	&__text {
@@ -1132,7 +1196,9 @@ body {
 			margin-bottom: 40px;
 			text-align: center;
 		}
-		
+		@media (max-width: $r_mob_360) {
+			max-width: 320px;
+		}
 	}
 	&__list {
 		display: flex;
@@ -1152,6 +1218,10 @@ body {
 		@media (max-width: $r_desk) {
 			gap: 4rem;
 		} 
+		@media (max-width: $r_mob_360) {
+			font-size: 1.75rem;
+			gap: .5rem;
+		}
 	}
 	&__item {
 		display: flex;
@@ -1169,23 +1239,39 @@ body {
 			margin-bottom: 1.5rem;
 			background-repeat: no-repeat;
 			animation: borders infinite 5s;
+				@media (max-width: $r_mob_360) {
+					animation: none;
+					width: 60px;
+					height: 58px;
+					margin-bottom: 1rem;
+				}
 			}
 		&:nth-child(1) {
 			&::before {
 			background-image: url(../images/fruits.png);
 			background-size: 44px 41px;
+				@media (max-width: $r_mob_360) {
+					background-size: 30px 32px;
+				}
+
 			}
 		}
 		&:nth-child(2) {
 			&::before {
 				background-image: url(../images/traditional.png);
 				background-size: 44px 41px;
+				@media (max-width: $r_mob_360) {
+					background-size: 28px 28px;
+				}
 			}
 		}
 		&:nth-child(3) {
 			&::before {
 			background-image: url(../images/goodd.png);
 			background-size: 45px 39px;
+				@media (max-width: $r_mob_360) {
+					background-size: 32px 28px;
+				}
 			}
 		}				
 	}	
@@ -1194,10 +1280,17 @@ body {
 	padding-top: 4.6rem;
 	padding-bottom: 30px;
 	@media (max-width: $r_tab) {
-		padding-bottom: 6.8rem;
+		padding-bottom: 6.8rem;		
+	}
+	@media (max-width: $r_mob_360) {
+		padding-top: 0.2rem;
 	}
 	&__text {
 		margin-top: 4rem;
+		@media (max-width: $r_mob_360) {
+			max-width: 209px;
+			margin: 2.5rem auto 0;
+		}		
 	}
 	&_title {
 		margin-top: 10px;
@@ -1214,6 +1307,9 @@ body {
 	overflow: hidden;
 	&__item {
 		margin-top: 3.7rem;
+		@media (max-width: $r_mob_360) {
+			margin-top: 2.4rem;
+		}
 	}
 	&__list {
 		padding-left: 0;
@@ -1271,6 +1367,9 @@ body {
 		@media (max-width: $r_mob_500) {
 			font-size: 1.5rem;
 			padding: 11px 38px;
+		}
+		@media (max-width: $r_mob_360) {
+			font-size: 1.25rem;
 		}
 		&:hover {
 			border: 1px solid rgba($orange, 0.5);

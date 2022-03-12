@@ -60,6 +60,9 @@ body {
 	@media (max-width: $r_mob_567) {
 		padding-right: 0;
 	}
+	@media (max-width: $r_mob_360) {
+		margin: 42px auto 0;
+	}
 }
 .header  {
 	max-width: 1440px;
@@ -1323,8 +1326,7 @@ body {
 			max-width: 900px;			
 			margin: 0 auto;
 			justify-content: center;
-		}
-
+		}		
 		@media (max-width: $r_mob_500) {
 			flex-wrap: nowrap;
 			justify-content: flex-start;
@@ -1335,6 +1337,9 @@ body {
 			padding-bottom: 4rem;
 			padding-left: 15px;
 			gap: 10px;
+		}
+		@media (max-width: $r_mob_360) {
+			padding-top: 0px;			
 		}
 	}
 	&__text {		
@@ -1370,6 +1375,8 @@ body {
 		}
 		@media (max-width: $r_mob_360) {
 			font-size: 1.25rem;
+			padding: 13px 10px;
+			width: 90px;
 		}
 		&:hover {
 			border: 1px solid rgba($orange, 0.5);
@@ -1435,6 +1442,10 @@ body {
 			overflow: hidden;
 			height: 78px;
 		}
+
+		@media (max-width: $r_mob_360) {
+			height: 42px;
+		}
 	}
 }
 .catalog-grid {
@@ -1455,7 +1466,9 @@ body {
 	@media (max-width: $r_mob_500) {
 		margin-top: 1rem;
 	}
-	
+	@media (max-width: $r_mob_360) {
+		margin-top: 2.2rem;
+	}
 
 	&__item {
 		box-sizing: border-box;
@@ -1473,6 +1486,13 @@ body {
 			text-align: center;
 			padding: 2.2rem 2rem 2.8rem;
 		}
+		&:nth-last-child(-n+4) {
+			
+			@media (max-width: $r_mob_360) {
+				display: none;
+			}
+		}
+
 	}
 	&__cover {
 		overflow: hidden;
@@ -1505,6 +1525,10 @@ body {
 		@media (max-width: $r_mob_567) {
 			font-size: 1.4rem;
 		}
+		@media (max-width: $r_mob_360) {
+			font-size: 1.75rem;
+			margin-top: 2px;
+		}
 	}
 	&__description {
 		padding: 0;
@@ -1523,6 +1547,13 @@ body {
 			min-height: 34px;			
 			max-width: 180px;
 			margin: 0 auto;
+
+			
+		}
+		@media (max-width: $r_mob_360) {
+			min-height: 48px;
+			max-width: 115px;
+			margin: 7px auto 0;
 		}
 	}
 	&__price {

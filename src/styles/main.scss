@@ -766,6 +766,7 @@ body {
 .slider {
 	overflow: hidden;
 	padding-top: 9.5rem;
+	padding-bottom: 1px;
 	@media (max-width: $r_tab) {
 		margin: 0 auto;
 		padding-top: 5.4rem;

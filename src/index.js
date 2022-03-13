@@ -29,14 +29,17 @@ var swiper = new Swiper(".offerSwiper", {
     breakpoints: {
         320: {
           slidesPerView: 1,
+          slidesPerGroup: 1,
           spaceBetween: 1
         },
         768: {
           slidesPerView: 2,
+          slidesPerGroup: 2,
           spaceBetween: 1
         },
         1121: {
           slidesPerView: 3,
+          slidesPerGroup: 3,
           spaceBetween: 3
         }
       }
@@ -60,14 +63,17 @@ var swiper = new Swiper(".trandsSwiper", {
     breakpoints: {
       320: {
         slidesPerView: 1,
+        slidesPerGroup: 1,
         spaceBetween: 1
       },
       768: {
         slidesPerView: 2,
+        slidesPerGroup: 2,
         spaceBetween: 20
       },
       1200: {
         slidesPerView: 3,
+        slidesPerGroup: 3,
         spaceBetween: 1
       }
     }

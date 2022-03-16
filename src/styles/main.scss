@@ -837,13 +837,13 @@ body {
 			}
 			@media (max-width: $r_tab) {
 				height: 300px;
-				background-size: 71%;
+				background-size: auto 195px;
 				background-position-x: center;
 				padding: 2.2rem 3.0rem;
 			}
 			@media (max-width: $r_mob_500) {
 				height: 240px;
-				background-size: 300px;
+				// background-size: 300px;
 				padding: 2.2rem 1.7rem;
 			}
 			&:hover {
@@ -880,7 +880,7 @@ body {
 				// background-size: 100%;
 			}	
 			@media (max-width: $r_tab) {
-				background-image: url(../images/milk-tab.png);
+				background-image: url(../images/milk-hd.png);
 			}
 			@media (max-width: $r_mob_360) {
 				// background-position: 16% 0%;
@@ -892,7 +892,7 @@ body {
 			background-image: url(../images/pasta.png);
 			transition: .2s ease-in;
 			@media (max-width: $r_tab) {
-				background-image: url(../images/pasta-tab.png);
+				background-image: url(../images/pasta-hd.png);
 			}
 		}
 		&_steaks {
@@ -904,7 +904,7 @@ body {
 				background-position: right;
 			}
 			@media (max-width: $r_tab) {
-				background-image: url(../images/steaks-tab.png);
+				background-image: url(../images/steaks-hd.png);
 				background-position: top;
 			}
 		}

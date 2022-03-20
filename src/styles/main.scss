@@ -865,7 +865,7 @@ body {
         // background-size: 100%;
       }
       @media (max-width: $r_tab) {
-        background-image: url(../images/milk-tab.png);
+        background-image: url(../images/milk-hd.png);
       }
       @media (max-width: $r_mob_360) {
         // background-position: 16% 0%;
@@ -877,7 +877,7 @@ body {
       background-image: url(../images/pasta.png);
       transition: 0.2s ease-in;
       @media (max-width: $r_tab) {
-        background-image: url(../images/pasta-tab.png);
+        background-image: url(../images/pasta-hd.png);
       }
     }
     &_steaks {
@@ -889,7 +889,7 @@ body {
         background-position: right;
       }
       @media (max-width: $r_tab) {
-        background-image: url(../images/steaks-tab.png);
+        background-image: url(../images/steaks-hd.png);
         background-position: top;
       }
     }

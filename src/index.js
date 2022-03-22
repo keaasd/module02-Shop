@@ -78,3 +78,37 @@ var swiper = new Swiper(".trandsSwiper", {
       }
     }
 });
+let tabButton = document.querySelector('.category__button');
+let gridItem = document.querySelectorAll('.catalog-grid__item');
+// по клику на кнопку (tabButton) добавляем класс (active display: block) к табличкам (catalog-grid__item)
+
+tabButton.onclick = () => {
+  for (let i = 0; i < gridItem.length; i++) {
+    if (i < 8) {
+      gridItem[i].classList.add('catalog-grid_active')
+    }
+    
+  }
+
+}
+// const hidd = for (let i = 0; i < gridItem.length; i++) {
+//   if (i < 8) {
+//     gridItem[i].classList.add('catalog-grid_active')
+//   }
+
+//  gridItem.length(4).classList.add('hidden');
+//  let gridItems = gridItem.length(4);
+//  tabButton.onclick = () => {
+//    for (let i = 0; i < gridItem.length; i++) {
+//      if (i < 8) {
+//        gridItem[i].classList.add('catalog-grid_active')
+//      }
+     
+//    }
+//   }
+ 
+	// клик мышкой несколько обработчиков события
+
+	//  tabButton.addEventListener('click', () => {
+  //     gridItem.classList.add('catalog-grid_active')
+  //   })

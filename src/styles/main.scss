@@ -64,6 +64,12 @@ body {
     margin: 42px auto 0;
   }
 }
+.hidden {
+  display: none;
+  @media (min-width: 803px) {
+    display: block;
+  }
+}
 .header {
   max-width: 1440px;
   margin: 0 auto 4.7rem;
@@ -823,14 +829,15 @@ body {
       }
       @media (max-width: $r_tab) {
         height: 300px;
-        background-size: 200px;
+        background-size: auto 170px;
         background-position-x: center;
         padding: 2.2rem 3rem;
       }
       @media (max-width: $r_mob_500) {
         height: 240px;
-        background-size: 300px;
+        // background-size: 160px;
         padding: 2.2rem 1.7rem;
+        background-position: center 0%;
       }
       &:hover {
         .swiper-slide__hover {
@@ -868,7 +875,6 @@ body {
         background-image: url(../images/milk-hd.png);
       }
       @media (max-width: $r_mob_360) {
-        background-position: 16% 0%;
         background-size: auto 158px;
       }
     }
@@ -1508,11 +1514,11 @@ body {
     @media (max-width: $r_mob_360) {
       padding: 2.2rem 1rem 2.8rem;
     }
-    &:nth-last-child(-n + 4) {
-      @media (max-width: $r_mob_360) {
-        display: none;
-      }
-    }
+    // &:nth-last-child(-n + 4) {
+    //   @media (max-width: $r_mob_360) {
+    //     display: none;
+    //   }
+    // }
   }
   &__cover {
     overflow: hidden;
@@ -1613,6 +1619,10 @@ body {
       margin-top: 1.4rem;
     }
   }
+}
+.catalog-grid_active {
+  display: block;
+  transition: 0.3s ease-out;
 }
 .counter_btn_min {
   background-size: 30px 30px;
@@ -2257,6 +2267,7 @@ footer {
     }
   }
 }
+
 @keyframes shadow {
   0% {
     box-shadow: 5px 20px 33px 0px rgba($green, 0.5);
